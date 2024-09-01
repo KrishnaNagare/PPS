@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	int a=6 , b=4;
+	int a=50 , b=100;
 	
 	cout<< " a==b is " << (a==b) <<endl;
 	
