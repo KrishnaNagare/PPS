@@ -1,16 +1,22 @@
-#include <iostream>
-using namespace std;
-int main()
-{
-	int number = 234;
-	
-	if (number > 5)
-	{
-		cout << "The number is greater than 5." << endl;
-	}
-	else
-	{
-		cout << "The number is 5 or less." << endl;
-	}
-	return 0;
+#include <iostream> 
+using namespace std; 
+class Base { 
+public: 
+virtual void print() { 
+cout << "Base Function" << endl; 
+} 
+}; 
+class Derived : public Base { 
+public: 
+void print() { 
+cout << "Derived Function" << endl; 
+} 
+}; 
+int main() { 
+Derived derived1; 
+// pointer of Base type that points to derived1 
+Base* base1 = &derived1; 
+// calls member function of Derived class 
+base1->print(); 
+return 0; 
 }
